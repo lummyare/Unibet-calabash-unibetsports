@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="2" name="App Login" skipped="0" tests="5" time="78.969048">
+<testcase classname="App Login" name="Invalid Login credentials" time="19.286996">
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="App Login" name="Enter Username without the Password" time="22.266992">
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="App Login" name="Enter valid login credentials" time="17.306371">
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="App Login" name="Unnamed scenario" time="11.432126">
+  <failure message="failed Unnamed scenario" type="failed">
+    <![CDATA[Scenario: Unnamed scenario
+
+Given i forgot my password
+And I click the Forgot button
+Then I navigate to Get new password page
+When I click back button
+Then I should navigate back to log in page
+
+Message:
+]]>
+    <![CDATA[No element found for query: * marked:'Get a new password' (RuntimeError)
+./features/step_definitions/login_steps.rb:84:in `/^I navigate to Get new password page$/'
+features/LogIn_scenarios.feature:30:in `Then I navigate to Get new password page']]>
+  </failure>
+  <system-out/>
+  <system-err/>
+</testcase>
+<testcase classname="App Login" name="New User registration" time="8.676563">
+  <failure message="failed New User registration" type="failed">
+    <![CDATA[Scenario: New User registration
+
+Given I am a new user
+And I click on Register button
+Then I should land on Registration Screen
+When I click the close button
+Then I should go back to Log in Screen
+
+Message:
+]]>
+    <![CDATA[No element found for query: * marked:'Registration' (RuntimeError)
+./features/step_definitions/login_steps.rb:113:in `/^I should land on Registration Screen$/'
+features/LogIn_scenarios.feature:38:in `Then I should land on Registration Screen']]>
+  </failure>
+  <system-out/>
+  <system-err/>
+</testcase>
+  <system-out>
+    <![CDATA[Geocoder: HTTP request being made for http://maps.googleapis.com/maps/api/geocode/json?address=Tower+of+London&language=en&sensor=false
+Geocoder: HTTP request being made for http://maps.googleapis.com/maps/api/geocode/json?address=Tower+of+London&language=en&sensor=false
+Geocoder: HTTP request being made for http://maps.googleapis.com/maps/api/geocode/json?address=Tower+of+London&language=en&sensor=false
+]]>
+  </system-out>
+  <system-err>
+    <![CDATA[]]>
+  </system-err>
+</testsuite>
