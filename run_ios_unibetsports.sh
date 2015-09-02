@@ -12,7 +12,7 @@ SCHEME_XC="UnibetSports-cal"
 BUILD_CONFIG="Debug"
 FEATURES_PATH="features"
 ARCHITECTURE_SELECTED="i386 x86_64"
-APPNAME="UnibetSports copy"
+APPNAME="UnibetSports-cal"
 PROJ_LOC="/Users/seunare/ios-apps/UnibetApps.xcworkspace"
 
 if [ $1 = "clean" ]
@@ -29,5 +29,5 @@ BUILT_PRODUCTS_DIR=$(xcodebuild -scheme "${SCHEME_XC}" -workspace "${PROJ_LOC}" 
 
 APP_BUNDLE_PATH_VAR="${BUILT_PRODUCTS_DIR}"/"${BUILD_CONFIG}"-iphonesimulator/"${APPNAME}".app
 
-echo DEVICE_TARGET='iPhone 6 (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR bundle exec cucumber -p ios --tag $2
-DEVICE_TARGET='iPhone 6 (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR bundle exec cucumber -p ios --tag $2
+echo DEVICE_TARGET='iPhone 6 Plus (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR bundle exec cucumber -p ios --tag $2
+DEVICE_TARGET='iPhone 6 Plus (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR bundle exec cucumber -p ios --tag $2

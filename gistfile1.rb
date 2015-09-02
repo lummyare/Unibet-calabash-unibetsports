@@ -73,4 +73,4 @@ class SimLocale
 
 end
 
-SimLocale.new.change_sim_locale "8-4","iPhone 6 Plus","tr_TR"
+SimLocale.new.change_sim_locale "8-4","iPhone 6 Plus","en_GB"
