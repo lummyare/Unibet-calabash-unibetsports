@@ -24,6 +24,8 @@ Before do |scenario|
 
   unless @calabash_launcher.calabash_no_launch?
     @calabash_launcher.relaunch(:timeout=>60)
+    set_location(latitude: 51.50722, longitude: -0.12750)
+    # set_location place:'Tower of London'
     @calabash_launcher.calabash_notify(self)
   end
 end
