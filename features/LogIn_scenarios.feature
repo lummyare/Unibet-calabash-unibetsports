@@ -1,6 +1,9 @@
 @login
 Feature: App Login
 
+  Background:
+    Given I set location to london
+
 @invalid_login
   Scenario: Invalid Login credentials
     Given I land on Login screen

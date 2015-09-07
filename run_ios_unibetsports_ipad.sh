@@ -7,6 +7,8 @@ or else remove the argument."
 echo "APPNAME - name of the application usually same as the scheme name"
 echo "PROJ_LOC - location of xcode project if thats same as current folder remove this option."
 ruby gistfile1.rb
+set_location latitude: 51.50722, longitude: -0.12750
+
 
 SCHEME_XC="UnibetSports-cal"
 BUILD_CONFIG="Debug"
@@ -29,6 +31,7 @@ BUILT_PRODUCTS_DIR=$(xcodebuild -scheme "${SCHEME_XC}" -workspace "${PROJ_LOC}" 
 
 APP_BUNDLE_PATH_VAR="${BUILT_PRODUCTS_DIR}"/"${BUILD_CONFIG}"-iphonesimulator/"${APPNAME}".app
 
+set_location latitude: 51.50722, longitude: -0.12750
 
 echo DEVICE_TARGET='iPad Air (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR bundle exec cucumber -p ios --tag $2
 DEVICE_TARGET='iPad Air (8.4 Simulator)' APP_BUNDLE_PATH=$APP_BUNDLE_PATH_VAR  bundle exec cucumber -p ios --tag $2

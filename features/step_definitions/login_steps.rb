@@ -1,4 +1,6 @@
 Given(/^I land on Login screen$/) do
+ 2.times {
+  set_location(latitude: 51.50722, longitude: -0.12750) }
 
   k=set_location place:'Tower of London'
   if
@@ -120,4 +122,9 @@ Then(/^I should go back to Log in Screen$/) do
   sleep 2
   @loginPage.verify_logIn_page "Log in with your Unibet account"
   sleep 1
+end
+
+Given(/^I set location to london$/) do
+  set_location(latitude: 51.50722, longitude: -0.12750)
+  set_location(place:'Tower of London')
 end
