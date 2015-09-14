@@ -90,6 +90,7 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
+    random_data (1.6.0)
     retriable (1.4.1)
     rubyzip (1.1.7)
     run_loop (1.4.1)
@@ -125,3 +126,4 @@ DEPENDENCIES
   cocoapods
   colorize
   plist
+  random_data

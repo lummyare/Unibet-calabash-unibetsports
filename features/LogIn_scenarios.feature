@@ -42,4 +42,14 @@ Feature: App Login
     When I click the close button
     Then I should go back to Log in Screen
 
+  @new_registration_empty_entry
+  Scenario:
+    Given I am a new user
+    And I click on Register button
+    Then I should land on Registration Screen
+    When I click on continue button
+    Then I should navigate the registration form
+    When I click continue without filling the form
+    Then Error messages should be populated on the empty text fields
+
 
