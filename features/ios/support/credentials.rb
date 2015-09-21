@@ -9,6 +9,6 @@ CREDENTIALS = {
     },
     no_password: {
         username: 'cms_co_uk',
-        password: '     '
+        password: ''
     }
 }

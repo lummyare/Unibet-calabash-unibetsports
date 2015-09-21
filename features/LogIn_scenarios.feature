@@ -1,4 +1,4 @@
-@login
+@run_all @login
 Feature: App Login
 
   Background:
@@ -49,7 +49,7 @@ Feature: App Login
     Then I should land on Registration Screen
     When I click on continue button
     Then I should navigate the registration form
-    When I click continue without filling the form
+    When I scroll to bottom page and click continue without filling the form
     Then Error messages should be populated on the empty text fields
 
 

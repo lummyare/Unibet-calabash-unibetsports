@@ -17,6 +17,8 @@ Given(/^I land on Login screen$/) do
 end
 
 And(/^I enter an invalid login credentials$/) do
+  touch "* marked:'LOG IN'"
+  sleep 2
   user = CREDENTIALS[:invalid_user]
   @loginPage.login(user[:username], user[:password],)
   sleep 1
@@ -39,6 +41,8 @@ Then(/^invalid username and password message should be visible$/) do
 end
 
 And(/^I enter a username without password$/) do
+  touch "* marked:'LOG IN'"
+  sleep 2
   user = CREDENTIALS[:no_password]
   @loginPage.login(user[:username], user[:password],)
   sleep 1
@@ -58,6 +62,8 @@ Then(/^the Log in button should be disabled$/) do
 end
 
 And(/^I enter an valid login credentials$/) do
+  touch "* marked:'LOG IN'"
+  sleep 1
   user = CREDENTIALS[:valid_user]
 @loginPage.login(user[:username], user[:password],)
 end
@@ -71,7 +77,9 @@ Then(/^Log in should be successful$/) do
 end
 
 Given(/^i forgot my password$/) do
-  sleep 1
+  sleep 2
+  touch "* marked:'LOG IN'"
+sleep 1
   check_element_exists "* marked:'Forgot?'"
 
 end
@@ -103,6 +111,9 @@ Then(/^I should navigate back to log in page$/) do
 end
 
 Given(/^I am a new user$/) do
+  sleep 2
+  touch "* marked:'LOG IN'"
+  sleep 1
   check_element_exists "* marked:'Register'"
 end
 
@@ -111,16 +122,18 @@ And(/^I click on Register button$/) do
 end
 
 Then(/^I should land on Registration Screen$/) do
-  check_element_exists "* marked:'Registration'"
+  sleep 2
+  check_element_exists "* marked:'REGISTRATION'"
 end
 
 When(/^I click the close button$/) do
-  touch "button marked:'image close white'"
+  sleep 1
+  touch "button marked:'image close'"
 end
 
 Then(/^I should go back to Log in Screen$/) do
   sleep 2
-  @loginPage.verify_logIn_page "Log in with your Unibet account"
+ check_element_exists "* marked:'LOG IN'"
   sleep 1
 end
 
